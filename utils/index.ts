@@ -62,7 +62,7 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
   const { make, year, model } = car;
   url.searchParams.append("customer", "hrjavascript-mastery");
   url.searchParams.append("make", make);
-  url.searchParams.append("modelFamily", model.split(" "));
+  url.searchParams.append("modelFamily", model);
   url.searchParams.append("zoomType", "fullscreen");
   url.searchParams.append("modelYear", `${year}`);
   url.searchParams.append("angle", `${angle}`);
