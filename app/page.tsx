@@ -1,7 +1,5 @@
 import { CarCard, CustomFilter, Hero, SearchBar } from "@/components";
 import { fetchCars } from "@/utils";
-import { log } from "console";
-
 export default async function Home() {
   const allCars = await fetchCars();
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
@@ -18,8 +16,8 @@ export default async function Home() {
         <div className="home__filters">
           <SearchBar />
           <div className="home__filter-container">
-            <CustomFilter title="fuel" />
-            <CustomFilter title="year" />
+            <CustomFilter />
+            <CustomFilter />
           </div>
         </div>
         {!isDataEmpty ? (
